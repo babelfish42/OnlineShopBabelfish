@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseOnlineShopModelStoreContainer" CdmEntityContainer="DatabaseOnlineShopEntities">
+    <EntitySetMapping Name="BeanBags">
+      <EntityTypeMapping TypeName="DatabaseOnlineShop.Model.BeanBag">
+        <MappingFragment StoreEntitySet="BeanBag">
+          <ScalarProperty Name="BeanBagTypeID" ColumnName="BeanBagTypeID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Prize" ColumnName="Prize" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BeanBagTypes">
+      <EntityTypeMapping TypeName="DatabaseOnlineShop.Model.BeanBagType">
+        <MappingFragment StoreEntitySet="BeanBagType">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

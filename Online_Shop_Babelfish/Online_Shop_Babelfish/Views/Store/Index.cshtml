@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Online_Shop_Babelfish.Models.BeanBagType>
+@{
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Browse Bean Bag Types</h3>
+<p> Select from @Model.Count() bean bag types:</p>
+<ul>@foreach (var beanBagType in Model)
+    {
+        <li>@Html.ActionLink(beanBagType.Name, "Browse", new { beanBagType = beanBagType.Name })</li>
+    }
+</ul>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OnlineShopModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="OnlineShopModelStoreContainer">
+    <EntitySet Name="BeanBag" EntityType="OnlineShopModel.Store.BeanBag" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeanBagType" EntityType="OnlineShopModel.Store.BeanBagType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Right" EntityType="OnlineShopModel.Store.Right" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Role" EntityType="OnlineShopModel.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="OnlineShopModel.Store.User" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="BeanBag">
+    <Key>
+      <PropertyRef Name="BeanBagID" />
+    </Key>
+    <Property Name="BeanBagID" Type="int" Nullable="false" />
+    <Property Name="BeanBagTypeID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Prize" Type="int" Nullable="false" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BeanBagType">
+    <Key>
+      <PropertyRef Name="BeanBagTypeID" />
+    </Key>
+    <Property Name="BeanBagTypeID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Right">
+    <Key>
+      <PropertyRef Name="RightID" />
+    </Key>
+    <Property Name="RightID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="RightID" Type="int" Nullable="false" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Street" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Hno" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Zip" Type="int" Nullable="false" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Birthdate" Type="datetime" />
+    <Property Name="Phone" Type="datetime" />
+    <Property Name="eMail" Type="datetime" Nullable="false" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema>

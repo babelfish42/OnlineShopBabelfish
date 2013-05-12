@@ -1,0 +1,15 @@
+﻿@model Online_Shop_Babelfish.Models.BeanBagType
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Browsing Bean Bag Types: @Model.Name</h2>
+<ul> @foreach (var beanBag in Model.BeanBags)
+{
+<li> @Html.ActionLink(beanBag.Name, "Details", new { id = beanBag.BeanBagID})
+</li>
+}
+</ul>
